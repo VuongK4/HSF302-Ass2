@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "users")
 @Getter
@@ -17,13 +19,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "full_name", length = 30, columnDefinition = "VARCHAR(30)")
+    @Column(name = "full_name", length = 30)
     private String fullName;
 
-    @Column(name = "email", unique = true, length = 30, columnDefinition = "VARCHAR(30)")
+    @Column(name = "email", unique = true, length = 30,  nullable = false)
     private String email;
 
-    @Column(name = "mobile", unique = true, length = 10, nullable = false, columnDefinition = "CHAR(10)")
+    @Column(name = "mobile", unique = true, length = 15)
     private String mobile;
 
     @Column(name = "password", unique = true)
@@ -33,7 +35,7 @@ public class User {
     private String avatarUrl;
 
     @Column(name = "last_login")
-    private String lastLogin;
+    private LocalDateTime lastLogin;
 
     @Column(name = "status")
     private boolean status;

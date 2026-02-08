@@ -19,15 +19,15 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title", nullable = false, length = 255, columnDefinition = "NVARCHAR(255)")
+    @Column(name = "title", nullable = false, length = 255)
     private String title;
 
-    @Column(name = "context", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "context", columnDefinition = "TEXT")
     private String context;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User user_id;
 
     @Column(name = "status")
     private String status;

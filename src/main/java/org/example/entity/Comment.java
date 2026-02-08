@@ -21,13 +21,13 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User user_id;
 
     @ManyToOne
     @JoinColumn(name = "post_id")
-    private Post post;
+    private Post post_id;
 
-    @Column(name = "comment", nullable = false, columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "comment", nullable = false, columnDefinition = "TEXT")
     private String comment;
 
     @Column(name = "create_at")
