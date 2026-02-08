@@ -25,7 +25,7 @@ public class Setting {
 
     @ManyToOne
     @JoinColumn(name = "type_id")
-    private Setting type;
+    private Setting type_id;
 
     @Column(name = "order_index")
     private int orderIndex;
