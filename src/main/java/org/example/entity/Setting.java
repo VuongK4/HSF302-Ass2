@@ -17,10 +17,10 @@ public class Setting {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", length = 100, columnDefinition = "NVARCHAR(100)")
+    @Column(name = "name", length = 100)
     private String name;
 
-    @Column(name = "value",length = 255, columnDefinition = "NVARCHAR(255)")
+    @Column(name = "value",length = 255)
     private String value;
 
     @ManyToOne
